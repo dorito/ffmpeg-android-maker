@@ -22,7 +22,6 @@ SUPPORTED_LIBRARIES_FREE=(
   "libopus"
   "libtwolame"
   "libspeex"
-  "libvpx"
   "libfreetype"
   "libfribidi"
 )
