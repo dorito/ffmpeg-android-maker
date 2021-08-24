@@ -15,11 +15,7 @@ jobs:
           sudo pip3 install meson==0.58.2
           sudo apt-get install nasm ninja-build
 
-      - name: What Cmake binary do we have?
-        run: ls $ANDROID_HOME/cmake/3.10.2.4988404/bin
-
       - name: Executing the script
-        run: ./ffmpeg-android-maker.sh -all-free -all-gpl -android=18 -abis=${{ matrix.abi }}
+        run: ffmpeg-android-maker.sh -all-free -all-gpl -android=18 -abis=${{ matrix.abi }}
         env:
           ANDROID_SDK_HOME: $ANDROID_HOME
-          ANDROID_NDK_HOME: $ANDROID_NDK_LATEST_HOME
